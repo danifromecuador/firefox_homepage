@@ -26,5 +26,9 @@
         "*.jsx"
       ]
     }
+  ],
+  "ignores": [
+    "dist/",
+    "vite.congif.js"
   ]
 }
