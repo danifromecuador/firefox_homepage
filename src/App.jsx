@@ -13,15 +13,64 @@ export const App = () => {
 
   return (
     <div className='app'>
-      Hello Dani
-      <button type='button' onClick={() => changeBackground()}>
-        change background
-      </button>
       <img
         src={imagesArray[index]}
         alt='background-image'
         className='background-image'
       />
+      <button type='button' onClick={() => changeBackground()}>
+        change background
+      </button>
+      <div className='main'>
+        <div className='row'>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+        </div>
+        <div className='row'>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+        </div>
+        <div className='row'>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+        </div>
+        <div className='row'>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+        </div>
+      </div>
     </div>
   )
 }
