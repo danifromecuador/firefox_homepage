@@ -7,7 +7,8 @@ export const App = () => {
   const imagesArray = [bgImg1, bgImg2]
   const [index, setIndex] = useState(0)
   const changeBackground = () => {
-    setIndex((index) => index + 1)
+    if (index < imagesArray.length - 1) setIndex((index) => index + 1)
+    else setIndex(0)
   }
 
   return (
