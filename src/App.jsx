@@ -13,14 +13,8 @@ export const App = () => {
 
   return (
     <div className='app'>
-      <img
-        src={imagesArray[index]}
-        alt='background-image'
-        className='background-image'
-      />
-      <button type='button' onClick={() => changeBackground()}>
-        change background
-      </button>
+      <img src={imagesArray[index]} className='background-image' />
+      <button type='button' onClick={changeBackground}></button>
       <div className='main'>
         <div className='row'>
           <div className='link-container'></div>
