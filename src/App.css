@@ -37,16 +37,16 @@ button:hover {
 .main {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1vw;
 }
 
 .row {
   display: flex;
-  gap: 10px;
+  gap: 1vw;
 }
 
 .row .link-container {
+  width: 8vw;
+  height: 8vw;
   border: 1px solid cyan;
-  width: 100px;
-  height: 100px;
 }
