@@ -1,35 +1,70 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import bgImg1 from './assets/backgrounds/-red-sunset-wallpaper.jpg'
+import bgImg2 from './assets/backgrounds/0001-pixels.jpg'
 
-function App() {
-  const [count, setCount] = useState(0)
+// TODO: include a black background image
+
+export const App = () => {
+  const imagesArray = [bgImg1, bgImg2]
+  const [index, setIndex] = useState(0)
+  const changeBackground = () =>
+    index >= imagesArray.length - 1 ? setIndex(0) : setIndex(index + 1)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className='app'>
+      <img src={imagesArray[index]} className='background-image' />
+      <button type='button' onClick={changeBackground}></button>
+      <div className='main'>
+        <div className='row'>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+        </div>
+        <div className='row'>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+        </div>
+        <div className='row'>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+        </div>
+        <div className='row'>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+          <div className='link-container'></div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
-
-export default App
