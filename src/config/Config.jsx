@@ -4,10 +4,15 @@ import './Config.css'
 
 export const Config = () => {
   const store = Store()
+  const show = store.show1 ? 'hide' : 'show'
+
   return (
-    <div className={store.show1 && 'hide'}>
-      <button onClick={() => store.toggleShow1()}>X</button>
-      Config Component
+    <div className={`config ${show}`}>
+      <button
+        className='button--close'
+        onClick={() => store.toggleShow1()}
+      ></button>
+      <button className='button--change-wallpaper'>change wallpaper</button>
     </div>
   )
 }
