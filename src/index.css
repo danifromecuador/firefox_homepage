@@ -8,3 +8,11 @@ html {
   background-color: black;
   color: white;
 }
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}

@@ -1,5 +1,6 @@
 // TODO: include a black background image
-import { useState } from 'react'
+import { Store } from './store/store'
+import { Config } from './config/Config'
 import './App.css'
 import bgImg1 from './assets/backgrounds/-red-sunset-wallpaper.jpg'
 import bgImg2 from './assets/backgrounds/0001-lake-sunset.jpg'
@@ -11,6 +12,7 @@ import bgImg7 from './assets/backgrounds/divka-se-sluchatky-cachyos.jpg'
 import bgImg8 from './assets/backgrounds/rejection-journey-wallpaper.jpg'
 
 export const App = () => {
+  const store = Store()
   const imagesArray = [
     bgImg1,
     bgImg2,
@@ -21,14 +23,15 @@ export const App = () => {
     bgImg7,
     bgImg8,
   ]
-  const [index, setIndex] = useState(0)
-  const changeBackground = () =>
-    index >= imagesArray.length - 1 ? setIndex(0) : setIndex(index + 1)
 
   return (
     <div className='app'>
-      <img src={imagesArray[index]} className='background-image' />
-      <button type='button' onClick={changeBackground}></button>
+      <img src={imagesArray[4]} className='background-image' />
+      <button
+        type='button'
+        className={`button--config ${store.show1 || 'hide'}`}
+        onClick={() => store.toggleShow1()}
+      ></button>
       <div className='main'>
         <div className='row'>
           <div className='link-container'></div>
@@ -79,6 +82,7 @@ export const App = () => {
           <div className='link-container'></div>
         </div>
       </div>
+      <Config />
     </div>
   )
 }

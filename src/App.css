@@ -16,7 +16,7 @@
   z-index: -1;
 }
 
-button {
+.button--config {
   width: 20px;
   height: 20px;
   cursor: pointer;
