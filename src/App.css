@@ -17,22 +17,15 @@
 }
 
 .button--config {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  padding: 10px;
-  border: none;
   position: absolute;
-  right: 15px;
-  bottom: 15px;
+  right: 1vw;
+  bottom: 1vw;
   background-image: url(chrome://global/skin/icons/settings.svg);
   background-repeat: no-repeat;
-  background-color: transparent;
+  background-position: center;
 }
 
-button:hover {
-  scale: 1.5;
-}
+
 
 .main {
   display: flex;

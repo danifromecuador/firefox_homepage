@@ -10,9 +10,26 @@ html {
 }
 
 .show {
-  display: block;
+  display: flex;
 }
 
 .hide {
   display: none;
+}
+
+button {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button:hover {
+  scale: 1.5;
 }
