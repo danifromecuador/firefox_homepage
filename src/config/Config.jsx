@@ -14,7 +14,7 @@ export const Config = () => {
       ></button>
       <button
         className='button--change-wallpaper'
-        onClick={() => store.changeWallpaper()}
+        onClick={() => store.changeWallpaperIndex()}
       >
         change wallpaper
       </button>
@@ -23,17 +23,41 @@ export const Config = () => {
         <div>
           <p>Rows:</p>
           <p className='btn-set'>
-            <button>-</button>
-            {3}
-            <button>+</button>
+            <button
+              onClick={() => {
+                store.setRows(store.rows - 1)
+              }}
+            >
+              -
+            </button>
+            {store.rows}
+            <button
+              onClick={() => {
+                store.setRows(store.rows + 1)
+              }}
+            >
+              +
+            </button>
           </p>
         </div>
         <div>
           <p>Columns:</p>
           <p className='btn-set'>
-            <button>-</button>
-            {3}
-            <button>+</button>
+            <button
+              onClick={() => {
+                store.setColumns(store.columns - 1)
+              }}
+            >
+              -
+            </button>
+            {store.columns}
+            <button
+              onClick={() => {
+                store.setColumns(store.columns + 1)
+              }}
+            >
+              +
+            </button>
           </p>
         </div>
       </div>

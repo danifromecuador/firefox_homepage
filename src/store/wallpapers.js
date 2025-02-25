@@ -19,7 +19,7 @@ export const wallpapersArray = [
 ]
 
 let index = 0
-export const changeWallpaper = (set) => {
+export const changeWallpaperIndex = (set) => {
   if (index >= wallpapersArray.length - 1) index = 0
   else index++
 
