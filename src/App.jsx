@@ -6,6 +6,7 @@ import './App.css'
 export const App = () => {
   const store = Store()
   const show1 = store.show1 ? 'show' : 'hide'
+  const [rows, columns] = [store.rows, store.columns]
 
   return (
     <div className='app'>
@@ -19,54 +20,13 @@ export const App = () => {
         onClick={() => store.toggleShow1()}
       ></button>
       <div className='main'>
-        <div className='row'>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-        </div>
-        <div className='row'>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-        </div>
-        <div className='row'>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-        </div>
-        <div className='row'>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-        </div>
+        {Array.from({ length: rows }).map((_, index) => (
+          <div key={index} className='row'>
+            {Array.from({ length: columns }).map((_, index) => (
+              <div key={index} className='link-container'></div>
+            ))}
+          </div>
+        ))}
       </div>
       <Config />
     </div>
