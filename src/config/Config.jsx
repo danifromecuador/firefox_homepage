@@ -18,6 +18,25 @@ export const Config = () => {
       >
         change wallpaper
       </button>
+      <div className='grid-layout'>
+        <h2>Grid Layout</h2>
+        <div>
+          <p>Rows:</p>
+          <p className='btn-set'>
+            <button>-</button>
+            {3}
+            <button>+</button>
+          </p>
+        </div>
+        <div>
+          <p>Columns:</p>
+          <p className='btn-set'>
+            <button>-</button>
+            {3}
+            <button>+</button>
+          </p>
+        </div>
+      </div>
     </div>
   )
 }

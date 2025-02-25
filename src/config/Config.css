@@ -1,7 +1,7 @@
 .config.show {
   width: 300px;
   height: 100%;
-  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
   right: 0;
   padding: 1vw;
@@ -18,12 +18,32 @@
   background-position: center;
 }
 
-.config .button--change-wallpaper {
+.config .button--change-wallpaper { 
   background-color: white;
   width: fit-content;
   height: fit-content;
-}
+} 
 
 .config .button--change-wallpaper:hover {
   scale: 1.1;
 }
+
+.config .grid-layout {
+  padding-top: 2vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  width: 100%;
+}
+
+.config .grid-layout > * {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.config .grid-layout .btn-set {
+  display: flex;
+  gap: 0.5vw;
+}
+
