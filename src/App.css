@@ -43,4 +43,6 @@
   width: 8vw;
   height: 8vw;
   border: 1px solid cyan;
+  border-radius: 10px;
+  cursor: pointer;
 }
