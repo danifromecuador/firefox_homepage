@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Store } from '../store/store'
 import './Config.css'
 
@@ -5,6 +6,10 @@ export const Config = () => {
   const store = Store()
   // if config button is showing then hide this component, else show it
   const show = store.show1 ? 'hide' : 'show'
+
+  useEffect(() => {
+    localStorage.setItem('rows', store.rows)
+  }, [store.rows])
 
   return (
     <div className={`config ${show}`}>
