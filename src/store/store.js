@@ -9,7 +9,7 @@ export const Store = create(
     toggleShow1: () => set((state) => ({ show1: !state.show1 })),
 
     wallpapersArray: wallpapersArray,
-    wallpaperIndex: 0,
+    wallpaperIndex: localStorage.getItem('wallpaperIndex') || 0,
     changeWallpaper: () => changeWallpaper(set),
 
     rows: localStorage.getItem('grid') ? JSON.parse(localStorage.getItem('grid')).rows : 3,

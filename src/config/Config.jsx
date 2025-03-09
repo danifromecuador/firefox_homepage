@@ -11,6 +11,10 @@ export const Config = () => {
     localStorage.setItem('grid', JSON.stringify({ rows: store.rows, columns: store.columns }))
   }, [store.rows, store.columns])
 
+  useEffect(() => {
+    localStorage.setItem('wallpaperIndex', store.wallpaperIndex)
+  }, [store.wallpaperIndex])
+
   return (
     <div className={`config ${show}`}>
       <button className='button--close' onClick={() => store.toggleShow1()}></button>

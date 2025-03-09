@@ -9,7 +9,7 @@ import bgImg8 from '../assets/backgrounds/rejection-journey-wallpaper.jpg'
 
 export const wallpapersArray = [bgImg1, bgImg2, bgImg3, bgImg4, bgImg5, bgImg6, bgImg7, bgImg8]
 
-let index = 0
+let index = localStorage.getItem('wallpaperIndex') || 0
 export const changeWallpaper = (set) => {
   if (index >= wallpapersArray.length - 1) index = 0
   else index++
