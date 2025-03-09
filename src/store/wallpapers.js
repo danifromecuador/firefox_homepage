@@ -7,19 +7,10 @@ import bgImg6 from '../assets/backgrounds/00013-island.jpg'
 import bgImg7 from '../assets/backgrounds/divka-se-sluchatky-cachyos.jpg'
 import bgImg8 from '../assets/backgrounds/rejection-journey-wallpaper.jpg'
 
-export const wallpapersArray = [
-  bgImg1,
-  bgImg2,
-  bgImg3,
-  bgImg4,
-  bgImg5,
-  bgImg6,
-  bgImg7,
-  bgImg8,
-]
+export const wallpapersArray = [bgImg1, bgImg2, bgImg3, bgImg4, bgImg5, bgImg6, bgImg7, bgImg8]
 
 let index = 0
-export const changeWallpaperIndex = (set) => {
+export const changeWallpaper = (set) => {
   if (index >= wallpapersArray.length - 1) index = 0
   else index++
 

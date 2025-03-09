@@ -8,22 +8,13 @@ export const Config = () => {
   const show = store.show1 ? 'hide' : 'show'
 
   useEffect(() => {
-    localStorage.setItem(
-      'grid',
-      JSON.stringify({ rows: store.rows, columns: store.columns }),
-    )
+    localStorage.setItem('grid', JSON.stringify({ rows: store.rows, columns: store.columns }))
   }, [store.rows, store.columns])
 
   return (
     <div className={`config ${show}`}>
-      <button
-        className='button--close'
-        onClick={() => store.toggleShow1()}
-      ></button>
-      <button
-        className='button--change-wallpaper'
-        onClick={() => store.changeWallpaperIndex()}
-      >
+      <button className='button--close' onClick={() => store.toggleShow1()}></button>
+      <button className='button--change-wallpaper' onClick={() => store.changeWallpaper()}>
         change wallpaper
       </button>
       <div className='grid-layout'>
