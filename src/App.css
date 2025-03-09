@@ -16,23 +16,17 @@
   z-index: -1;
 }
 
-button {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  padding: 10px;
-  border: none;
+.button--config {
   position: absolute;
-  right: 15px;
-  bottom: 15px;
+  right: 1vw;
+  bottom: 1vw;
+  background-color: beige;
   background-image: url(chrome://global/skin/icons/settings.svg);
   background-repeat: no-repeat;
-  background-color: transparent;
+  background-position: center;
 }
 
-button:hover {
-  scale: 1.5;
-}
+
 
 .main {
   display: flex;
@@ -49,4 +43,6 @@ button:hover {
   width: 8vw;
   height: 8vw;
   border: 1px solid cyan;
+  border-radius: 10px;
+  cursor: pointer;
 }

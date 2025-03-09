@@ -1,70 +1,26 @@
-import { useState } from 'react'
+import { Store } from './store/store'
+import { Config } from './config/Config'
 import './App.css'
-import bgImg1 from './assets/backgrounds/-red-sunset-wallpaper.jpg'
-import bgImg2 from './assets/backgrounds/0001-pixels.jpg'
-
-// TODO: include a black background image
 
 export const App = () => {
-  const imagesArray = [bgImg1, bgImg2]
-  const [index, setIndex] = useState(0)
-  const changeBackground = () =>
-    index >= imagesArray.length - 1 ? setIndex(0) : setIndex(index + 1)
+  const store = Store()
+  const show1 = store.show1 ? 'show' : 'hide'
+  const [rows, columns] = [store.rows, store.columns]
 
   return (
     <div className='app'>
-      <img src={imagesArray[index]} className='background-image' />
-      <button type='button' onClick={changeBackground}></button>
+      <img src={store.wallpapersArray[store.wallpaperIndex]} className='background-image' />
       <div className='main'>
-        <div className='row'>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-        </div>
-        <div className='row'>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-        </div>
-        <div className='row'>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-        </div>
-        <div className='row'>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-          <div className='link-container'></div>
-        </div>
+        {Array.from({ length: rows }).map((index) => (
+          <div key={index} className='row'>
+            {Array.from({ length: columns }).map((index) => (
+              <div key={index} className='link-container'></div>
+            ))}
+          </div>
+        ))}
       </div>
+      <button type='button' className={`button--config ${show1}`} onClick={() => store.toggleShow1()}></button>
+      <Config />
     </div>
   )
 }
