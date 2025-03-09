@@ -1,4 +1,3 @@
-// TODO: include a black background image
 import { Store } from './store/store'
 import { Config } from './config/Config'
 import './App.css'
