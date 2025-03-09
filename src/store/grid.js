@@ -1,6 +1,6 @@
 export const setRows = (set, rows) => {
   if (rows <= 1) rows = 1
-  if (rows >= 10) rows = 10
+  if (rows >= 6) rows = 6
 
   return set(() => ({
     rows: rows,
