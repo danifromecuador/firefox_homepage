@@ -10,24 +10,17 @@ export const App = () => {
 
   return (
     <div className='app'>
-      <img
-        src={store.wallpapersArray[store.wallpaperIndex]}
-        className='background-image'
-      />
-      <button
-        type='button'
-        className={`button--config ${show1}`}
-        onClick={() => store.toggleShow1()}
-      ></button>
+      <img src={store.wallpapersArray[store.wallpaperIndex]} className='background-image' />
       <div className='main'>
-        {Array.from({ length: rows }).map((_, index) => (
+        {Array.from({ length: rows }).map((index) => (
           <div key={index} className='row'>
-            {Array.from({ length: columns }).map((_, index) => (
+            {Array.from({ length: columns }).map((index) => (
               <div key={index} className='link-container'></div>
             ))}
           </div>
         ))}
       </div>
+      <button type='button' className={`button--config ${show1}`} onClick={() => store.toggleShow1()}></button>
       <Config />
     </div>
   )
