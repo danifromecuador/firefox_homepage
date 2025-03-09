@@ -12,8 +12,12 @@ export const Store = create(
     wallpaperIndex: 0,
     changeWallpaperIndex: () => changeWallpaperIndex(set),
 
-    rows: 3,
-    columns: 6,
+    rows: localStorage.getItem('grid')
+      ? JSON.parse(localStorage.getItem('grid')).rows
+      : 3,
+    columns: localStorage.getItem('grid')
+      ? JSON.parse(localStorage.getItem('grid')).columns
+      : 6,
     setRows: (rows) => setRows(set, rows),
     setColumns: (columns) => setColumns(set, columns),
   })),

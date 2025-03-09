@@ -8,8 +8,11 @@ export const Config = () => {
   const show = store.show1 ? 'hide' : 'show'
 
   useEffect(() => {
-    localStorage.setItem('rows', store.rows)
-  }, [store.rows])
+    localStorage.setItem(
+      'grid',
+      JSON.stringify({ rows: store.rows, columns: store.columns }),
+    )
+  }, [store.rows, store.columns])
 
   return (
     <div className={`config ${show}`}>
